@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/logo.svg" type="image/x-icon">
+    <title>Ahorcado - Alura</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css" rel="stylesheet" type="text/css">
+    <!-- Style -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <main>
+        <nav class="container py-3 h-auto">
+            <div class="logo">
+                <img src="./assets/img/logo.svg" class="img-fluid h-100" alt="logo-alura">
+            </div>
+        </nav>
+        <div>
+            <section class="section-inicio">
+                <div>
+                    <button class="btn btn-game fs-2 rounded-5 py-3 px-5" id="btn_start">INICIAR JUEGO</button>
+                </div>
+                <div>
+                    <button class="btn btn-game-outline fs-6 rounded-5 py-3 px-4" id="btn_addWord">AGREGAR NUEVA PALABRA</button>
+                </div>
+            </section>
+            <section class="section-game d-none">
+                <div class="container">
+                    <div class="panel-view panel-game">
+                        <canvas id="game"></canvas>
+                    </div>
+                    <div class="panel-view pt-5">
+                        <div class="d-flex justify-content-around text-center" id="words"></div>
+                    </div>
+                    <div class="panel-view py-3">
+                        <div class="d-flex justify-content-around text-center" id="useWords"></div>
+                    </div>
+                    <div class="panel-view">
+                        <div class="opc-word row g-2">
+                            <div class="col-12 col-md">
+                                <button class="btn btn-game rounded-5 py-3 w-100" id="btn_continue">Nuevo Juego</button>
+                            </div>
+                            <div class="col-12 col-md">
+                                <button class="btn btn-game-outline rounded-5 py-3 w-100" id="btn_exit">Desistir</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-word d-none">
+                <div class="container">
+                    <div class="panel-view txt-area">
+                        <textarea name="aWord" id="aWord" placeholder="Ingrese una palabra" maxlength="8"></textarea>
+                    </div>
+                    <div class="panel-view">
+                        <p><i class="fa-solid fa-circle-exclamation"></i> Máx. de 8 letras</p>
+                        <div class="opc-word row g-2">
+                            <div class="col-12 col-md">
+                                <button class="btn btn-game rounded-5 py-3 w-100" id="btn_saveWord">Guardar y empezar</button>
+                            </div>
+                            <div class="col-12 col-md">
+                                <button class="btn btn-game-outline rounded-5 py-3 w-100" id="btn_cancel">Cancelar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <div id="modals"></div>
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <!-- Script -->
+    <script type="module" src="./assets/js/script.js"></script>
+</body>
+</html>
